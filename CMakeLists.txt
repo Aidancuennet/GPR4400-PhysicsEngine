@@ -4,10 +4,8 @@
 cmake_minimum_required (VERSION 3.8)
 
 # Name of the solution
-# TODO: Rename solution
-project ("solution-name")
+project ("GPR4400-PhysicsEngine")
 
 # Include sub-projects.
-# TODO: Rename project
-set(EXECUTABLE_CUSTOM_NAME "project-name")
-add_subdirectory ("project-name")
+set(EXECUTABLE_CUSTOM_NAME "Vectors")
+add_subdirectory ("Vectors")
