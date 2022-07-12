@@ -5,7 +5,9 @@
 #include <iostream>
 #include "vector2.h"
 #include "Rigidbody.h"
+//#include "CircleMRUA.h"
 #include <cmath>
+#include <vector>
 
 namespace gpr4400 {
 
@@ -35,9 +37,9 @@ namespace gpr4400 {
 		{
 			return center + velocity * time;
 		}
-		Vector2f velocity = { 0.f, 0.f };
-		const Vector2f G = { 0.f, 0.f }; // G (9.81 m/s^2)
-		const float R = 0.90f;
+		Vector2f velocity = { 20.f, 20.f };
+		const Vector2f G = { 0.f, 9.81f }; // G (9.81 m/s^2)
+		const float R = 0.80f;
 		float mass;
 		void update_variable(double delta_time, int dx, int dy) {
 			Vector2f previous_center = center;
@@ -94,16 +96,17 @@ namespace gpr4400 {
 			circles_.clear();
 		}
 
-		void CreateCircle(Vector2f location, float radius, Vector2f velocity0, float mass)
+		void CreateCircle(Vector2f mousePos, float radius, Vector2f velocity0, float mass)
 		{
 			CircleMRUA circle;
-			circle.center = location;
+			circle.center = mousePos;
 			circle.radius = radius;
 			circle.velocity = velocity0;
 			circle.mass = mass;
 
 			circles_.push_back(circle);
 		}
+
 		void UpdateDrawData(double delta_time) {
 			float new_time = delta_time * 1.0;
 			for (auto& circle : circles_) {
