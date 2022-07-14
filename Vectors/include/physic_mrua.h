@@ -37,7 +37,7 @@ namespace gpr4400 {
 		{
 			return center + velocity * time;
 		}
-		Vector2f velocity = { 20.f, 20.f };
+		Vector2f velocity = { 5.f, 5.f };
 		const Vector2f G = { 0.f, 9.81f }; // G (9.81 m/s^2)
 		const float R = 0.80f;
 		float mass;

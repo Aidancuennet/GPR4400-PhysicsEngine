@@ -63,23 +63,24 @@ int main(int ac, char** av) {
 				
 				if (event.key.code == sf::Keyboard::Key::Q)
 				{
-					physic_sym.CreateCircle({ static_cast<float>(mouse.getPosition(window).x/100), static_cast<float>(mouse.getPosition(window).y/100) }, 20.f, { 4.f, 4.f }, 20.f);
+					physic_sym.CreateCircle({ static_cast<float>(mouse.getPosition(window).x / 100), static_cast<float>(mouse.getPosition(window).y / 100) }, 10.f, { 4.f, 4.f }, 20.f);
 				}
 				if (event.key.code == sf::Keyboard::Key::W)
 				{
+					physic_sym.CreateCircle({ static_cast<float>(mouse.getPosition(window).x / 100), static_cast<float>(mouse.getPosition(window).y / 100) }, 20.f, { 4.f, 4.f }, 30.f);
+				}
+				if (event.key.code == sf::Keyboard::Key::E)
+				{
 					physic_sym.CreateCircle({ static_cast<float>(mouse.getPosition(window).x / 100), static_cast<float>(mouse.getPosition(window).y / 100) }, 30.f, { 4.f, 4.f }, 30.f);
 				}
-				
+				if (event.key.code == sf::Keyboard::Key::R)
+				{
+					physic_sym.CreateCircle({ static_cast<float>(mouse.getPosition(window).x / 100), static_cast<float>(mouse.getPosition(window).y / 100) }, 40.f, { 4.f, 4.f }, 40.f);
+				}
+				if (event.key.code == sf::Keyboard::Key::T)
+					physic_sym.Init();
 				if (event.key.code == sf::Keyboard::Key::Escape)
 					window.close();
-					
-			//if (event.key.code == sf::Keyboard::Key::W)
-				//	physic_sym.CreateCircle({ 0,0 }, 20.f, { 4.f,4.f }, 20.f);
-				//if (event.key.code == sf::Keyboard::Key::E)
-				//	physic_sym.CreateCircle({ 0,0 }, 30.f, { 4.f,4.f }, 30.f);
-				//if (event.key.code == sf::Keyboard::Key::R)
-				//	physic_sym.CreateCircle({ 0,0 }, 40.f, { 4.f,4.f }, 40.f);
-				//if (event.key.code == sf::Keyboard::Key::T)
 					
 			}
 		}
