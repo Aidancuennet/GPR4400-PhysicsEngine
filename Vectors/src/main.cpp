@@ -48,7 +48,6 @@ int main(int ac, char** av) {
 
 	gpr4400::PhysicMRUAViewer physic_sym(1280, 720);
 	physic_sym.Init();
-	// Setup the timer.
 	auto start = std::chrono::steady_clock::now();
 	auto previous = start;
 	double delta_time = 0.0;

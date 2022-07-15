@@ -5,7 +5,6 @@
 #include <iostream>
 #include "vector2.h"
 #include "Rigidbody.h"
-//#include "CircleMRUA.h"
 #include <cmath>
 #include <vector>
 
